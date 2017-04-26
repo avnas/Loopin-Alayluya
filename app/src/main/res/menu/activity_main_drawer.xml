@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_wall"
+            android:icon="@drawable/ic_menu_send"
+            android:title="@string/wall" />
+
+        <item
+            android:id="@+id/nav_chat"
+            android:icon="@drawable/ic_menu_send"
+            android:title="@string/chat" />
+
+        <item
+            android:id="@+id/nav_notifications"
+            android:icon="@drawable/ic_menu_send"
+            android:title="@string/notifications" />
+
+        <item
+            android:id="@+id/nav_advanced_search"
+            android:icon="@drawable/ic_menu_send"
+            android:title="@string/advanced_research" />
+
+        <item
+            android:id="@+id/nav_friends_groups"
+            android:icon="@drawable/ic_menu_send"
+            android:title="@string/friends_group" />
+
+        <item
+            android:id="@+id/nav_nearby"
+            android:icon="@drawable/ic_menu_send"
+            android:title="@string/nearby" />
+
+        <item
+            android:id="@+id/nav_forum"
+            android:icon="@drawable/ic_menu_send"
+            android:title="@string/forum" />
+
+        <item
+            android:id="@+id/nav_popular"
+            android:icon="@drawable/ic_menu_send"
+            android:title="@string/popular" />
+
+        <item
+            android:id="@+id/nav_favourites_bookmarks"
+            android:icon="@drawable/ic_menu_send"
+            android:title="@string/favourites_bookmarks" />
+
+        <item
+            android:id="@+id/nav_articles"
+            android:icon="@drawable/ic_menu_send"
+            android:title="@string/articles" />
+
+    </group>
+
+</menu>

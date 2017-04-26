@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Loopin-Alayluya</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
+
+
+    ////////////////sign Up///////////////////////////////////
+
+    <string name="sign_up">SIGN UP</string>
+    <string name="first_name">FIRST NAME</string>
+    <string name="last_name">LAST NAME</string>
+    <string name="email">EMAIL</string>
+    <string name="password">PASSWORD</string>
+    <string name="re_type_password">RE-TYPE PASSWORD</string>
+
+  //////////////end of Sign Up////////////////////////////////
+
+
+   /////////////////////////////Login////////////////////
+    <string name="login">Sign In</string>
+    <string name="forget_password">forget password</string>
+    <string name="dont_have_account_access">Don\'t have an account yet?</string>
+    /////other will be taken from sign up
+    /////////////////////////end of login////////////////////////////
+
+    ///////////////////////navigation text///////////
+    <string name="wall">Wall</string>
+    <string name="chat">Chat</string>
+    <string name="notifications">Notifications</string>
+    <string name="advanced_research">Advanced Search</string>
+    <string name="friends_group">Friends &amp; Groups</string>
+    <string name="nearby">Nearby</string>
+    <string name="forum">Forum</string>
+    <string name="popular">Popular</string>
+    <string name="favourites_bookmarks">Favourites/Bookmarks</string>
+    <string name="articles">Articles</string>
+    ////////////////////////////////////////////////////////
+
+
+
+</resources>

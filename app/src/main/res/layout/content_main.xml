@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageBackground"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:scaleType="fitXY"
+                android:src="@drawable/imgbackground" />
+
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/app_bar_mian_profile_pic"
+                android:layout_width="120dp"
+                android:scaleType="centerCrop"
+                android:layout_height="85dp"
+                android:layout_gravity="top|center"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/pet"/>
+
+
+            <TextView
+                android:text="Fname Lname"
+                android:textColor="@color/colorWhite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"/>
+
+        </FrameLayout>
+
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="60dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_margin="10dp">
+
+                <ImageView
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_marginRight="7dp"
+                    android:src="@drawable/pet"/>
+                <ImageView
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_marginRight="7dp"
+                    android:src="@drawable/pet"/>
+                <ImageView
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_marginRight="7dp"
+                    android:src="@drawable/pet"/>
+                <ImageView
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_marginRight="7dp"
+                    android:src="@drawable/pet"/>
+                <ImageView
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_marginRight="7dp"
+                    android:src="@drawable/pet"/>
+                <ImageView
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_marginRight="7dp"
+                    android:src="@drawable/pet"/>
+                <ImageView
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_marginRight="7dp"
+                    android:src="@drawable/pet"/>
+                <ImageView
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_marginRight="7dp"
+                    android:src="@drawable/pet"/>
+                <ImageView
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_marginRight="7dp"
+                    android:src="@drawable/pet"/>
+                <ImageView
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_marginRight="7dp"
+                    android:src="@drawable/pet"/>
+                <ImageView
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_marginRight="7dp"
+                    android:src="@drawable/pet"/>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp">
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:layout_width="85dp"
+                    android:scaleType="centerCrop"
+                    android:layout_height="85dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="7dp"
+                    android:src="@drawable/pet"/>
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:layout_width="85dp"
+                    android:scaleType="centerCrop"
+                    android:layout_height="85dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="7dp"
+                    android:src="@drawable/pet"/>
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:layout_width="85dp"
+                    android:scaleType="centerCrop"
+                    android:layout_height="85dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="7dp"
+                    android:src="@drawable/pet"/>
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:layout_width="85dp"
+                    android:scaleType="centerCrop"
+                    android:layout_height="85dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="7dp"
+                    android:src="@drawable/pet"/>
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:layout_width="85dp"
+                    android:scaleType="centerCrop"
+                    android:layout_height="85dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="7dp"
+                    android:src="@drawable/pet"/>
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:layout_width="85dp"
+                    android:scaleType="centerCrop"
+                    android:layout_height="85dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="7dp"
+                    android:src="@drawable/pet"/>
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:layout_width="85dp"
+                    android:scaleType="centerCrop"
+                    android:layout_height="85dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="7dp"
+                    android:src="@drawable/pet"/>
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:layout_width="85dp"
+                    android:scaleType="centerCrop"
+                    android:layout_height="85dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="7dp"
+                    android:src="@drawable/pet"/>
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:layout_width="85dp"
+                    android:scaleType="centerCrop"
+                    android:layout_height="85dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="7dp"
+                    android:src="@drawable/pet"/>
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:layout_width="85dp"
+                    android:scaleType="centerCrop"
+                    android:layout_height="85dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="7dp"
+                    android:src="@drawable/pet"/>
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:layout_width="85dp"
+                    android:scaleType="centerCrop"
+                    android:layout_height="85dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="7dp"
+                    android:src="@drawable/pet"/>
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:layout_width="85dp"
+                    android:scaleType="centerCrop"
+                    android:layout_height="85dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="7dp"
+                    android:src="@drawable/pet"/>
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:layout_width="85dp"
+                    android:scaleType="centerCrop"
+                    android:layout_height="85dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="7dp"
+                    android:src="@drawable/pet"/>
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="45dp">
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/activity_content_main_token"
+                android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+
+</LinearLayout>

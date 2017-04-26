@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/activity_splash_screen_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:src="@drawable/bg1" />
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="80dp">
+
+
+        <Button
+            android:id="@+id/activity_splash_screen_btnLogin"
+            android:text="Login"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/button_effect"
+            android:layout_gravity="center"/>
+
+        <Button
+            android:id="@+id/activity_splash_screen_btnSignUp"
+            android:text="Sign Up"
+            android:layout_width="100dp"
+            android:layout_marginTop="50dp"
+            android:layout_height="50dp"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/button_effect"
+            android:layout_gravity="center"/>
+
+</LinearLayout>
+
+
+</FrameLayout>
