@@ -99,6 +99,8 @@ public class SignUpActivity extends Activity {
                         public void onResponse(Call<SignUpReturn> call, Response<SignUpReturn> response) {
                             if (response != null && response.body() != null) {
                                 if (response.body().isSuccess()) {
+                                    /////////////toast for a time being//
+                                    //////////////better if gets proper message form server////
                                     Toast.makeText(SignUpActivity.this, "sucessfully registered", Toast.LENGTH_SHORT).show();
                                 } else {
                                     Toast.makeText(SignUpActivity.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
