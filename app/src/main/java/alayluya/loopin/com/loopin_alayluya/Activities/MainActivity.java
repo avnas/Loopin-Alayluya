@@ -7,32 +7,73 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 
 import alayluya.loopin.com.loopin_alayluya.Helper.GlobalState;
 import alayluya.loopin.com.loopin_alayluya.Pojo.LoginReturn;
+import alayluya.loopin.com.loopin_alayluya.Pojo.UserProfileReturn;
 import alayluya.loopin.com.loopin_alayluya.R;
+import alayluya.loopin.com.loopin_alayluya.RetrofitHelper.RestClient;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    com.mikhaellopez.circularimageview.CircularImageView circularImageView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+
+        View headerView = navigationView.getHeaderView(0);
+        final TextView navUsername = (TextView) headerView.findViewById(R.id.nav_header_main_text);
 
 
         GlobalState state = GlobalState.singleton;
         LoginReturn loginReturn = new Gson().fromJson(state.getPREFS_Logged_USER_INFO(), LoginReturn.class);
 
         String lang = state.getCheckSelectedLanguage();
+        
+
+        RestClient.getClient().LoopinRequestProfile(loginReturn.getTokenType()+" "+loginReturn.getAccessToken())
+                .enqueue(new Callback<UserProfileReturn>() {
+                    @Override
+                    public void onResponse(Call<UserProfileReturn> call, Response<UserProfileReturn> response) {
+                        Toast.makeText(MainActivity.this, response.raw().message(), Toast.LENGTH_SHORT).show();
+
+                        Log.d("profile return", new Gson().toJson(response.body()));
+                       if (response.body().getIsSuccess()){
+                            Toast.makeText(MainActivity.this, "Bhayo", Toast.LENGTH_SHORT).show();
+                           String full_name = response.body().getResult().getFirstName()+" "+ response.body().getResult().getLastName();
+                           navUsername.setText(full_name);
+                        }
+                        else {
+                            Toast.makeText(MainActivity.this, response.raw().message(), Toast.LENGTH_SHORT).show();
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<UserProfileReturn> call, Throwable t) {
+
+                        Toast.makeText(MainActivity.this, t.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -40,16 +81,11 @@ public class MainActivity extends AppCompatActivity
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
-
         //this lets us to use the colorful icons
         navigationView.setItemIconTintList(null);
         /////////////////////////////////////////
 
-        View headerView = navigationView.getHeaderView(0);
-        final TextView navUsername = (TextView) headerView.findViewById(R.id.nav_header_main_text);
-        navUsername.setText(loginReturn.getAccount());
+
     }
 
     @Override

@@ -16,6 +16,7 @@ import com.google.gson.Gson;
 import alayluya.loopin.com.loopin_alayluya.Constants.Constant;
 import alayluya.loopin.com.loopin_alayluya.Helper.GlobalState;
 import alayluya.loopin.com.loopin_alayluya.Pojo.LoginReturn;
+import alayluya.loopin.com.loopin_alayluya.Pojo.UserProfileReturn;
 import alayluya.loopin.com.loopin_alayluya.R;
 import alayluya.loopin.com.loopin_alayluya.R2;
 import alayluya.loopin.com.loopin_alayluya.RetrofitHelper.RestClient;
@@ -33,10 +34,10 @@ import retrofit2.Response;
 public class LoginActivity extends Activity {
 
 
-
     protected static final int REQUEST_CODE_RESOLUTION = 1;
     private static final int REQUEST_AUTHORIZATION = 1;
     private static final int REQUEST_ACCOUNT_PICKER = 2;
+    String token;
 
 
     @BindView(R2.id.activity_login_et_email)
@@ -64,33 +65,33 @@ public class LoginActivity extends Activity {
     }
 
     @OnClick(R.id.activity_login_btn_login)
-        void loginButton (View view){
-        if(view.getId()== R.id.activity_login_btn_login){
+    void loginButton(View view) {
+        if (view.getId() == R.id.activity_login_btn_login) {
             String email = etEmail.getText().toString();
             String password = etPassword.getText().toString();
 
-            if(etEmail.getText().length()<3||etPassword.getText().length()<3 ){
+            if (etEmail.getText().length() < 3 || etPassword.getText().length() < 3) {
                 Toast.makeText(this, "Please provide proper information", Toast.LENGTH_SHORT).show();
-            }
-            else {
-        login();
+            } else {
+                login();
             }
         }
     }
 
     private void login() {
-        RestClient.getClient().LoopinLogin("grant_type=password&username="+etEmail.getText().toString()+"&password="+etPassword.getText().toString()+"")
+        RestClient.getClient().LoopinLogin("grant_type=password&username=" + etEmail.getText().toString() + "&password=" + etPassword.getText().toString() + "")
                 .enqueue(new Callback<LoginReturn>() {
                     @Override
                     public void onResponse(Call<LoginReturn> call, Response<LoginReturn> response) {
-                        Log.d("responselogin", new Gson().toJson(response.body()));
+                      //  Log.d("responselogin", new Gson().toJson(response.body()));
 
-                        if(response.body()!=null) {
+                        if (response.body() != null) {
                             if (response.body().getTokenType().equals("bearer")) {
 
                                 GlobalState state = GlobalState.singleton;
                                 state.setPrefsIsLoggedIn(Constant.STATE_TRUE, 1);
                                 state.setPrefsloggedUserInfo(new Gson().toJson(response.body()), 1);
+
 
                                 //Toast.makeText(getActivity(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
 
@@ -102,12 +103,10 @@ public class LoginActivity extends Activity {
 
                                 Toast.makeText(LoginActivity.this, response.raw().message(), Toast.LENGTH_SHORT).show();
                             }
-                        }
-                        else {
-                            if(response.code()==400){
+                        } else {
+                            if (response.code() == 400) {
                                 Toast.makeText(LoginActivity.this, Constant.USERNAME_PASSWORD_NOT_MATCHED, Toast.LENGTH_SHORT).show();
-                            }
-                            else {
+                            } else {
                                 Toast.makeText(LoginActivity.this, "Network Error", Toast.LENGTH_SHORT).show();
                             }
                         }
