@@ -31,6 +31,7 @@
 
         </activity>
         <activity android:name=".Activities.LoginActivity"/>
+        <activity android:name=".Activities.ArticleActivity"/>
     </application>
 
 </manifest>

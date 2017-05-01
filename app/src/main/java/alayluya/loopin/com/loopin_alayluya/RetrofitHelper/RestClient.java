@@ -53,9 +53,7 @@ public class RestClient {
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
 
-
             mInterface = retroClient.create(UserEndPointInterface.class);
-
 
         }
 

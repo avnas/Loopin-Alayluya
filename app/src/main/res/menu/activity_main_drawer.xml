@@ -1,58 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:itemBackground="@color/colorBrown">
+    >
 
     <group android:checkableBehavior="single">
 
         <item
             android:id="@+id/nav_wall"
-            android:icon="@drawable/ic_menu_send"
+            android:icon="@drawable/wall2x"
             android:title="@string/wall"/>
 
         <item
             android:id="@+id/nav_chat"
-            android:icon="@drawable/ic_menu_send"
+            android:icon="@drawable/chat2x"
             android:title="@string/chat" />
 
         <item
             android:id="@+id/nav_notifications"
-            android:icon="@drawable/ic_menu_send"
+            android:icon="@drawable/notification2x"
             android:title="@string/notifications" />
 
         <item
             android:id="@+id/nav_advanced_search"
-            android:icon="@drawable/ic_menu_send"
+            android:icon="@drawable/advanced_serarch2x"
             android:title="@string/advanced_research" />
 
         <item
             android:id="@+id/nav_friends_groups"
-            android:icon="@drawable/ic_menu_send"
+            android:icon="@drawable/friends_groups2x"
             android:title="@string/friends_group" />
 
         <item
             android:id="@+id/nav_nearby"
-            android:icon="@drawable/ic_menu_send"
+            android:icon="@drawable/nearby2x"
             android:title="@string/nearby" />
 
         <item
             android:id="@+id/nav_forum"
-            android:icon="@drawable/ic_menu_send"
+            android:icon="@drawable/forum2x"
             android:title="@string/forum" />
 
         <item
             android:id="@+id/nav_popular"
-            android:icon="@drawable/ic_menu_send"
+            android:icon="@drawable/popular2x"
             android:title="@string/popular" />
 
         <item
             android:id="@+id/nav_favourites_bookmarks"
-            android:icon="@drawable/ic_menu_send"
+            android:icon="@drawable/favourites_bookmarks2x"
             android:title="@string/favourites_bookmarks" />
 
         <item
             android:id="@+id/nav_articles"
-            android:icon="@drawable/ic_menu_send"
+            android:icon="@drawable/articles2x"
             android:title="@string/articles" />
 
     </group>
